@@ -1,5 +1,52 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header
+    i(class="fab fa-angellist")
+    h1 Administrador de tareas
+  section(class='formulario')
+    form(action="#", method="get")
+      input(type='text',placeholder='campo1',name='campo1',id='campo1',class='txt-1')
+      input(type='text',placeholder='campo2',name='campo2', id='campo2',class='txt-1')
+      input(type='text',placeholder='campo3',name='campo3',id='campo3',class='txt-1')
+      input(type='submit',name='Guardar',value="Guardar", class="boton-verde-1")
+  section(class='datos-tabla')
+    table(class='tabla-bonita')
+      thead
+        th #
+        th Materia
+        th UV
+        th Descripcion
+        th Opciones
+      Tbody(class='cuerpo-de-tabla')
+        tr 
+          td.numero 1
+          td.materia Materia
+          td.uv 5
+          td.descripcion Wii
+          td 
+            .gridbox
+              .grid1
+                .cubierta
+                  a(href="#",onclick='#',class="btn-editar")
+                    i(class="fas fa-pencil-alt")
+              .grid2
+                .cubierta
+                  a(href="#",onclick='#',class="btn-editar")
+                    i(class="far fa-window-minimize")
+        tr 
+          td.numero 1
+          td.materia Materia
+          td.uv 5
+          td.descripcion Wii
+          td 
+            .cubierta
+              a(href="#",onclick='cambiar()',class="btn-editar")
+                i(class="fas fa-pencil-alt")
+            .cubierta
+              a(href="#",onclick='#',class="btn-editar")
+                i(class="far fa-window-minimize")
+  script(src="./public/javascripts/main.js")
+            
+
+
